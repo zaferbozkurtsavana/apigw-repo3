@@ -1,0 +1,1 @@
+const zaferTestt = zafer3 + "123"

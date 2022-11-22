@@ -1,0 +1,1 @@
+const zafer3 = zaferr + "1"

@@ -1,0 +1,1 @@
+const zafer = "test1";

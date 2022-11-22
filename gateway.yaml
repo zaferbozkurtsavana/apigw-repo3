@@ -1,0 +1,43 @@
+apiVersion: "xbank/v1beta1"
+kind: "Gateway"
+metadata:
+  name: "repo3"
+  version: "v1"
+  minorVersion: "1.0"
+  teamName: "A-Team"
+spec:
+  muhtar: "1.6.6"
+  encumen: "1.2.3"
+  contextPath: "/repo3-path"
+  operations:
+  - name: "operation name zafer"
+    description: "operation desc"
+    httpVerb: "POST"
+    route: "/operation"
+    target:
+      httpVerb: "POST"
+      host: "host"
+      timeoutInSeconds: 300
+      transformationHandledExceptionCodes:
+      - 307
+      - 400
+      - 405
+      - 402
+      route:
+        type: "header"
+        value: "vluee"
+    transformation:
+      request:
+        filepath: "/repo3-path/operation name zafer/transformation/request.mjs"
+        timeoutInMilliSeconds: 3000
+      response:
+        filepath: "/repo3-path/operation name zafer/transformation/response.mjs"
+        timeoutInMilliSeconds: 5000
+    validation:
+      request:
+        filepath: "/repo3-path/operation name zafer/validation/request.mjs"
+      response:
+        filepath: "/repo3-path/operation name zafer/validation/response.mjs"
+  transformationRepo:
+    url: "https://github.com/zaferbozkurtsavana/apigw-repo3"
+    tag: "v1.0.0"
