@@ -1,4 +1,4 @@
-apiVersion: "xbank/v1beta3"
+apiVersion: "xbank/v1beta1"
 kind: "Gatewayt"
 metadata:
   name: "repo3"
@@ -10,7 +10,7 @@ spec:
   encumen: "1.2.3"
   contextPath: "/repo3-path"
   operations:
-  - name: "getAlisgidisCustomerData"
+  - name: "get-alis-gidis"
     description: "getAlisgidisCustomerData"
     httpVerb: "POST"
     route: "/get-alisgidis-customer-data"
@@ -23,20 +23,20 @@ spec:
       - "500"
       - 400
       route:
-        type: "uri"
+        type: "header"
         value: "RBF_GET_ALISGIDIS_CUSTOMER_DATA"
     transformation:
       request:
-        filepath: "/repo3-path/getAlisgidisCustomerData/transformation/request.mjs"
+        filepath: "/repo3-path/get-alis-gidis/transformation/request.mjs"
         timeoutInMilliSeconds: 4000
       response:
-        filepath: "/repo3-path/getAlisgidisCustomerData/transformation/response.mjs"
+        filepath: "/repo3-path/get-alis-gidis/transformation/response.mjs"
         timeoutInMilliSeconds: 4000
     validation:
       request:
-        filepath: "/repo3-path/getAlisgidisCustomerData/validation/request.mjs"
+        filepath: "/repo3-path/get-alis-gidis/validation/request.mjs"
       response:
-        filepath: "/repo3-path/getAlisgidisCustomerData/validation/response.mjs"
+        filepath: "/repo3-path/get-alis-gidis/validation/response.mjs"
   transformationRepo:
     url: "https://github.com/zaferbozkurtsavana/apigw-repo3"
-    tag: "v1.0.1"
+    tag: "v1.0.2"
