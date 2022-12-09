@@ -1,1 +1,1 @@
-Content of response joi mjs
+"Content of response joi mjs"

@@ -1,1 +1,1 @@
-Content of response.mjs
+"test3"

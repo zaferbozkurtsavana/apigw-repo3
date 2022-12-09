@@ -39,4 +39,4 @@ spec:
         filepath: "/repo3-path/alis-gidis/validation/response.mjs"
   transformationRepo:
     url: "https://github.com/zaferbozkurtsavana/apigw-repo3"
-    tag: "v1.0.3"
+    tag: "v1.0.4"
