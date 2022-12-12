@@ -10,7 +10,7 @@ spec:
   encumen: "1.2.3"
   contextPath: "/repo3-path"
   operations:
-  - name: "alis-gidis"
+  - name: "repo3-alis-gidis"
     description: "getAlisgidisCustomerData"
     httpVerb: "POST"
     route: "/get-alisgidis-customer-data"
@@ -27,16 +27,70 @@ spec:
         value: "RBF_GET_ALISGIDIS_CUSTOMER_DATA"
     transformation:
       request:
-        filepath: "/repo3-path/alis-gidis/transformation/request.mjs"
+        filepath: "/repo3-path/repo3-alis-gidis/transformation/request.mjs"
         timeoutInMilliSeconds: 4000
       response:
-        filepath: "/repo3-path/alis-gidis/transformation/response.mjs"
+        filepath: "/repo3-path/repo3-alis-gidis/transformation/response.mjs"
         timeoutInMilliSeconds: 4000
     validation:
       request:
-        filepath: "/repo3-path/alis-gidis/validation/request.mjs"
+        filepath: "/repo3-path/repo3-alis-gidis/validation/request.mjs"
       response:
-        filepath: "/repo3-path/alis-gidis/validation/response.mjs"
+        filepath: "/repo3-path/repo3-alis-gidis/validation/response.mjs"
+  - name: "repo3-alis-gidis-operation-3"
+    description: "getAlisgidisCustomerData"
+    httpVerb: "POST"
+    route: "/get-alisgidis-customer-data"
+    target:
+      httpVerb: "POST"
+      host: "core-nonprelive"
+      timeoutInSeconds: 120
+      transformationHandledExceptionCodes:
+      - "300"
+      - "500"
+      - 400
+      route:
+        type: "header"
+        value: "RBF_GET_ALISGIDIS_CUSTOMER_DATA"
+    transformation:
+      request:
+        filepath: "/repo3-path/repo3-alis-gidis-operation-3/transformation/request.mjs"
+        timeoutInMilliSeconds: 4000
+      response:
+        filepath: "/repo3-path/repo3-alis-gidis-operation-3/transformation/response.mjs"
+        timeoutInMilliSeconds: 4000
+    validation:
+      request:
+        filepath: "/repo3-path/repo3-alis-gidis-operation-3/validation/request.mjs"
+      response:
+        filepath: "/repo3-path/repo3-alis-gidis-operation-3/validation/response.mjs"
+  - name: "repo3-alis-gidis-operation-3-operation-4"
+    description: "getAlisgidisCustomerData"
+    httpVerb: "POST"
+    route: "/get-alisgidis-customer-data"
+    target:
+      httpVerb: "POST"
+      host: "core-nonprelive"
+      timeoutInSeconds: 120
+      transformationHandledExceptionCodes:
+      - "300"
+      - "500"
+      - 400
+      route:
+        type: "header"
+        value: "RBF_GET_ALISGIDIS_CUSTOMER_DATA"
+    transformation:
+      request:
+        filepath: "/repo3-path/repo3-alis-gidis-operation-3-operation-4/transformation/request.mjs"
+        timeoutInMilliSeconds: 4000
+      response:
+        filepath: "/repo3-path/repo3-alis-gidis-operation-3-operation-4/transformation/response.mjs"
+        timeoutInMilliSeconds: 4000
+    validation:
+      request:
+        filepath: "/repo3-path/repo3-alis-gidis-operation-3-operation-4/validation/request.mjs"
+      response:
+        filepath: "/repo3-path/repo3-alis-gidis-operation-3-operation-4/validation/response.mjs"
   transformationRepo:
     url: "https://github.com/zaferbozkurtsavana/apigw-repo3"
-    tag: "v1.0.4"
+    tag: "v1.0.5"
